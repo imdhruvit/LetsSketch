@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/konva@3.2.4/konva.min.js"></script>
+  <link rel="stylesheet" href="profile.css">
+  <title>Profile</title>
+</head>
+<body>
+  <div class="header">
+  <a href="#default" class="logo" id="head">Let's Sketch</a>
+  <div class="header-right">
+    <a href="profile.html" class="active">Profile</a>
+    <a href="previous.html">All Sketches</a>
+    <a href="home.html">Logout</a>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-sm-8">
+      <div id="container">
+      </div>
+    </div>
+  <div class="col-sm-4">
+    <div class="scrollmenu">
+      <div class="dropdown1">
+        <button class="dropbtn">Eyes
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Average Brown</a><br>
+          <a href="#">Hooded</a><br>
+          <a href="#">Narrow</a><br>
+        </div>
+      </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Eyebrows
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Straight</a><br>
+      <a href="#">Arched</a><br>
+      <a href="#">Plucked</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Nose
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Average with round base</a><br>
+      <a href="#">Average Pointed</a><br>
+      <a href="#">Large</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Lips
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Even</a><br>
+      <a href="#">Heart Shaped</a><br>
+      <a href="#">Thick</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Jaw Shapes
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Oval</a><br>
+      <a href="#">Rectangular</a><br>
+      <a href="#">Round</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Head Shapes
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Pointed</a><br>
+      <a href="#">Round</a><br>
+      <a href="#">Square</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Hair
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Average Short</a><br>
+      <a href="#">Long</a><br>
+      <a href="#">Partially Bald</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Mustache
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Short</a><br>
+      <a href="#">Thin</a><br>
+      <a href="#">Thick</a><br>
+    </div>
+  </div>
+</div>
+<div id="Beards_full">
+  <h3 style="text-align:center;">Beards - Full</h3>
+  <main class="grid">
+  <img src="data/Beards/full/500.png">
+  <img src="data/Beards/full/503.png">
+  </main>
+  <br>
+  <br />
+</div>
+<div id="Beards_oval">
+  <h3 style="text-align:center;">Beards - Oval</h3>
+  <main class="grid">
+  <img src="data/Beards/oval/300.png">
+  <img src="data/Beards/oval/302.png">
+  <img src="data/Beards/oval/305.png">
+  </main>
+  <br>
+  <br />
+</div>
+<div id="Beards_square">
+  <h3 style="text-align:center;">Beards - Square</h3>
+  <main class="grid">
+  <img src="data/Beards/square/400.png">
+  <img src="data/Beards/square/413.png">
+  </main>
+  <br>
+  <br />
+</div>
+<div id="Eyebrows_arched">
+  <h2 style="text-align:center;">Eyebrows - Arched</h2>
+  <main class="grid">
+  <img src="data/Eyebrows/Arched/602.png" >
+  <img src="data/Eyebrows/Arched/603.png" >
+  <img src="data/Eyebrows/Arched/604.png" >
+  </main>
+  <br>
+  <br />
+</div>
+<div id="Eyebrows_plucked">
+  <h2 style="text-align:center;">Eyebrows - Plucked</h2>
+  <main class="grid">
+  <img src="data/Eyebrows/Plucked/103.png" >
+  <img src="data/Eyebrows/Plucked/103.png" >
+  <img src="data/Eyebrows/Plucked/103.png" >
+  </main>
+  <br>
+  <br />
+</div>
+
+<div id="Eyes">
+  <h2 style="text-align:center;">Eyes</h2>
+  <main class="grid">
+  <img src="data/Eyes/100.png" >
+  <img src="data/Eyes/202.png" >
+  <img src="data/Eyes/301.png" >
+  <img src="data/Eyes/407.png" >
+  <img src="data/Eyes/503.png" >
+  <img src="data/Eyes/600.png" >
+  </main>
+  <br>
+  <br />
+</div>
+
+<div id="Glasses_regular">
+  <h2 style="text-align:center;">Glasses - Regular</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div><div id="average_brown">
+  <h2 style="text-align:center;">Average Brown</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div><div id="average_brown">
+  <h2 style="text-align:center;">Average Brown</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div><div id="average_brown">
+  <h2 style="text-align:center;">Average Brown</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div><div id="average_brown">
+  <h2 style="text-align:center;">Average Brown</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div><div id="average_brown">
+  <h2 style="text-align:center;">Average Brown</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div><div id="average_brown">
+  <h2 style="text-align:center;">Average Brown</h2>
+  <main class="grid">
+  <img src="/eyes/700.jpg" >
+  <img src="/eyes/701.jpg" >
+  <img src="/eyes/702.jpg" >
+  <img src="/eyes/703.jpg" >
+  <img src="/eyes/704.jpg" >
+  <img src="/eyes/705.jpg" >
+  </main>
+  <br>
+  <br />
+</div>
+  <button type="button" class="btn btn-success">Save</button>
+</div>
+</div>
+<script>
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+  function update(activeAnchor) {
+    var group = activeAnchor.getParent();
+
+    var topLeft = group.get('.topLeft')[0];
+    var topRight = group.get('.topRight')[0];
+    var bottomRight = group.get('.bottomRight')[0];
+    var bottomLeft = group.get('.bottomLeft')[0];
+    var image = group.get('Image')[0];
+
+    var anchorX = activeAnchor.getX();
+    var anchorY = activeAnchor.getY();
+
+    // update anchor positions
+    switch (activeAnchor.getName()) {
+      case 'topLeft':
+        topRight.y(anchorY);
+        bottomLeft.x(anchorX);
+        break;
+      case 'topRight':
+        topLeft.y(anchorY);
+        bottomRight.x(anchorX);
+        break;
+      case 'bottomRight':
+        bottomLeft.y(anchorY);
+        topRight.x(anchorX);
+        break;
+      case 'bottomLeft':
+        bottomRight.y(anchorY);
+        topLeft.x(anchorX);
+        break;
+    }
+
+    image.position(topLeft.position());
+
+    var width = topRight.getX() - topLeft.getX();
+    var height = bottomLeft.getY() - topLeft.getY();
+    if (width && height) {
+      image.width(width);
+      image.height(height);
+    }
+  }
+  function addAnchor(group, x, y, name) {
+    var stage = group.getStage();
+    var layer = group.getLayer();
+
+    var anchor = new Konva.Circle({
+      x: x,
+      y: y,
+      stroke: '#666',
+      fill: '#ddd',
+      strokeWidth: 2,
+      radius: 8,
+      name: name,
+      draggable: true,
+      dragOnTop: false
+    });
+
+    anchor.on('dragmove', function() {
+      update(this);
+      layer.draw();
+    });
+    anchor.on('mousedown touchstart', function() {
+      group.draggable(false);
+      this.moveToTop();
+    });
+    anchor.on('dragend', function() {
+      group.draggable(true);
+      layer.draw();
+    });
+    // add hover styling
+    anchor.on('mouseover', function() {
+      var layer = this.getLayer();
+      document.body.style.cursor = 'pointer';
+      this.strokeWidth(4);
+      layer.draw();
+    });
+    anchor.on('mouseout', function() {
+      var layer = this.getLayer();
+      document.body.style.cursor = 'default';
+      this.strokeWidth(2);
+      layer.draw();
+    });
+
+    group.add(anchor);
+  }
+
+  var stage = new Konva.Stage({
+    container: 'container',
+    width: width,
+    height: height
+  });
+
+  var layer = new Konva.Layer();
+  stage.add(layer);
+
+  // darth vader
+  var darthVaderImg = new Konva.Image({
+    width: 400,
+    height: 260
+  });
+
+  // yoda
+  var yodaImg = new Konva.Image({
+    width: 400,
+    height: 260
+  });
+
+  var darthVaderGroup = new Konva.Group({
+    x: 300,
+    y: 200,
+    draggable: true
+  });
+  layer.add(darthVaderGroup);
+  darthVaderGroup.add(darthVaderImg);
+  addAnchor(darthVaderGroup, 100, 50, 'topLeft');
+  addAnchor(darthVaderGroup, 300, 50, 'topRight');
+  addAnchor(darthVaderGroup, 300, 260, 'bottomRight');
+  addAnchor(darthVaderGroup, 100, 260, 'bottomLeft');
+
+  var yodaGroup = new Konva.Group({
+    x: 300,
+    y: 110,
+    draggable: true
+  });
+  layer.add(yodaGroup);
+  yodaGroup.add(yodaImg);
+  addAnchor(yodaGroup, 0, 0, 'topLeft');
+  addAnchor(yodaGroup, 300, 0, 'topRight');
+  addAnchor(yodaGroup, 300, 110, 'bottomRight');
+  addAnchor(yodaGroup, 0, 110, 'bottomLeft');
+
+  var imageObj1 = new Image();
+  imageObj1.onload = function() {
+    darthVaderImg.image(imageObj1);
+    layer.draw();
+  };
+  imageObj1.src = 'data/Jaw Shapes/300.png';
+
+  var imageObj2 = new Image();
+  imageObj2.onload = function() {
+    yodaImg.image(imageObj2);
+    layer.draw();
+  };
+  imageObj2.src = 'data/Hairs/317.png';
+  function showAnchors() {
+   this.find('Circle').show();
+   layer.draw();
+ }
+
+ function hideAnchors() {
+   this.find('Circle').hide();
+   layer.draw();
+ }
+
+ yodaGroup.on('mouseenter', showAnchors);
+ yodaGroup.on('mouseleave', hideAnchors);
+ darthVaderGroup.on('mouseenter', showAnchors);
+ darthVaderGroup.on('mouseleave', hideAnchors);
+</script>
+</body>
+</html>

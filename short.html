@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="profile.css">
+  <title>Profile</title>
+</head>
+<body>
+  <div class="header">
+  <a href="#default" class="logo" id="head">Let's Sketch</a>
+  <div class="header-right">
+    <a href="profile.html" class="active">Profile</a>
+    <a href="previous.html">All Sketches</a>
+    <a href="home.html">Logout</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-8">
+    <img src='/sample/7.jpg'>
+  </div>
+  <div class="col-sm-4">
+    <div class="scrollmenu">
+      <div class="dropdown1">
+        <button class="dropbtn">Eyes
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="average_brown.html">Average Brown</a><br>
+          <a href="#">Hooded</a><br>
+          <a href="#">Narrow</a><br>
+        </div>
+      </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Eyebrows
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="straight.html">Straight</a><br>
+      <a href="#">Arched</a><br>
+      <a href="#">Plucked</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Nose
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Average with round base</a><br>
+      <a href="#">Average Pointed</a><br>
+      <a href="#">Large</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Lips
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Even</a><br>
+      <a href="#">Heart Shaped</a><br>
+      <a href="#">Thick</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Jaw Shapes
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Oval</a><br>
+      <a href="#">Rectangular</a><br>
+      <a href="#">Round</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Head Shapes
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Pointed</a><br>
+      <a href="#">Round</a><br>
+      <a href="#">Square</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Hair
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Average Short</a><br>
+      <a href="#">Long</a><br>
+      <a href="#">Partially Bald</a><br>
+    </div>
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Mustache
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Short</a><br>
+      <a href="#">Thin</a><br>
+      <a href="#">Thick</a><br>
+    </div>
+  </div>
+</div>
+
+<h2 style="text-align:center;">Short</h2>
+<main class="grid">
+<a onclick="select(event)" href=""><img src="/features/moustache/126.jpg" alt="Sample photo"></a>
+<a><img src="/features/moustache/115.jpg" alt="Sample photo"></a>
+<img src="/features/moustache/118.jpg" alt="Sample photo">
+<img src="/features/moustache/119.jpg" alt="Sample photo">
+<img src="/features/moustache/125.jpg" alt="Sample photo">
+<img src="/features/moustache/130.jpg" alt="Sample photo">
+</main>
+<br>
+<br>
+<a href="previous.html"><button type="button" class="btn btn-success">Save</button></a>
+</div>
+
+<script>
+function select(event){
+  var y = document.getElementsByClassName("col-sm-8");
+    y[0].innerHTML = "<img src='/sample/9.jpg'>";
+    event.preventDefault();
+}
+</script>
+</body>
+</html>
