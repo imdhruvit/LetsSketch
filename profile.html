@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="profile.css">
   <title>Profile</title>
 </head>
-<body>
+<body onload="show()">
   <div class="header">
   <a href="#default" class="logo" id="head">Let's Sketch</a>
   <div class="header-right">
@@ -31,23 +31,25 @@
   <div class="col-sm-4">
     <div class="scrollmenu">
       <div class="dropdown1">
-        <button class="dropbtn">Eyes
+        <button onclick="show(Eyes)" class="dropbtn">Eyes
           <i class="fa fa-caret-down"></i>
         </button>
+        <!--
         <div class="dropdown-content">
-          <a href="#">Average Brown</a><br>
-          <a href="#">Hooded</a><br>
-          <a href="#">Narrow</a><br>
+          <a onclick="show(this)">Average Brown</a><br>
+          <a onclick="show(this)">Hooded</a><br>
+          <a onclick="show(this)">Narrow</a><br>
         </div>
+      -->
       </div>
   <div class="dropdown1">
     <button class="dropbtn">Eyebrows
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Straight</a><br>
-      <a href="#">Arched</a><br>
-      <a href="#">Plucked</a><br>
+      <!--<a onclick="show(this)">Straight</a><br>-->
+      <a onclick="show(Eyebrows_arched)">Arched</a><br>
+      <a onclick="show(Eyebrows_plucked)">Plucked</a><br>
     </div>
   </div>
   <div class="dropdown1">
@@ -55,9 +57,9 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Average with round base</a><br>
-      <a href="#">Average Pointed</a><br>
-      <a href="#">Large</a><br>
+      <a onclick="show(Noses_avg_pointed)">Average Pointed</a><br>
+      <a onclick="show(Noses_avg_with_round_base)">Average with round base</a><br>
+      <a onclick="show(Noses_avg_with_broad_base)">Average with broad base</a><br>
     </div>
   </div>
   <div class="dropdown1">
@@ -65,57 +67,84 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Even</a><br>
-      <a href="#">Heart Shaped</a><br>
-      <a href="#">Thick</a><br>
+      <a onclick="show(Lips_even)">Even</a><br>
+      <a onclick="show(Lips_wide)">Wide</a><br>
+      <!--<a onclick="show(this)">Thick</a><br>-->
     </div>
   </div>
   <div class="dropdown1">
-    <button class="dropbtn">Jaw Shapes
+    <button onclick="show(Jaw_Shapes)" class="dropbtn">JawShapes
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <!--
+    <div class="dropdown-content">
+      <a onclick="show(this)">Oval</a><br>
+      <a onclick="show(this)">Rectangular</a><br>
+      <a onclick="show(this)">Round</a><br>
+    </div>
+  -->
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">HeadShapes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Oval</a><br>
-      <a href="#">Rectangular</a><br>
-      <a href="#">Round</a><br>
+      <a onclick="show(Head_Shapes_round)">Round</a><br>
+      <a onclick="show(Head_Shapes_square)">Square</a><br>
+      <a onclick="show(Head_Shapes_pointed)">Pointed</a><br>
     </div>
   </div>
   <div class="dropdown1">
-    <button class="dropbtn">Head Shapes
+    <button onclick="show(Hairs)" class="dropbtn">Hair
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <!--
+    <div class="dropdown-content">
+      <a onclick="show(this)">Average Short</a><br>
+      <a onclick="show(this)">Long</a><br>
+      <a onclick="show(this)">Partially Bald</a><br>
+    </div>
+  -->
+  </div>
+  <div class="dropdown1">
+    <button onclick="show(Moustaches)" class="dropbtn">Moustache
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <!--
+    <div class="dropdown-content">
+      <a onclick="show(this)">Short</a><br>
+      <a onclick="show(this)">Thin</a><br>
+      <a onclick="show(this)">Thick</a><br>
+    </div>
+  -->
+  </div>
+  <div class="dropdown1">
+    <button class="dropbtn">Beard
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Pointed</a><br>
-      <a href="#">Round</a><br>
-      <a href="#">Square</a><br>
+      <a onclick="show(Beards_full)">Full</a><br>
+      <a onclick="show(Beards_oval)">Oval</a><br>
+      <a onclick="show(Beards_square)">Square</a><br>
     </div>
   </div>
   <div class="dropdown1">
-    <button class="dropbtn">Hair
+    <button class="dropbtn">Glasses
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Average Short</a><br>
-      <a href="#">Long</a><br>
-      <a href="#">Partially Bald</a><br>
-    </div>
-  </div>
-  <div class="dropdown1">
-    <button class="dropbtn">Mustache
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Short</a><br>
-      <a href="#">Thin</a><br>
-      <a href="#">Thick</a><br>
+      <a onclick="show(Glasses_regular)">Regular</a><br>
+      <a onclick="show(Glasses_tinted)">Tinted</a><br>
     </div>
   </div>
 </div>
+
+
 <div id="Beards_full" class = "features">
   <h3 style="text-align:center;">Beards - Full</h3>
   <main class="grid">
-  <img src="data/Beards/full/500.png">
-  <img src="data/Beards/full/503.png">
+  <img onclick="loadBeards(this)" src="data/Beards/full/500.png">
+  <img onclick="loadBeards(this)" src="data/Beards/full/503.png">
   </main>
   <br>
   <br />
@@ -123,9 +152,9 @@
 <div id="Beards_oval" class = "features">
   <h3 style="text-align:center;">Beards - Oval</h3>
   <main class="grid">
-  <img src="data/Beards/oval/300.png">
-  <img src="data/Beards/oval/302.png">
-  <img src="data/Beards/oval/305.png">
+  <img onclick="loadBeards(this)" src="data/Beards/oval/300.png">
+  <img onclick="loadBeards(this)" src="data/Beards/oval/302.png">
+  <img onclick="loadBeards(this)" src="data/Beards/oval/305.png">
   </main>
   <br>
   <br />
@@ -133,8 +162,8 @@
 <div id="Beards_square" class = "features">
   <h3 style="text-align:center;">Beards - Square</h3>
   <main class="grid">
-  <img src="data/Beards/square/400.png">
-  <img src="data/Beards/square/413.png">
+  <img onclick="loadBeards(this)" src="data/Beards/square/400.png">
+  <img onclick="loadBeards(this)" src="data/Beards/square/413.png">
   </main>
   <br>
   <br />
@@ -142,9 +171,9 @@
 <div id="Eyebrows_arched" class = "features">
   <h2 style="text-align:center;">Eyebrows - Arched</h2>
   <main class="grid">
-  <img src="data/Eyebrows/Arched/602.png" >
-  <img src="data/Eyebrows/Arched/603.png" >
-  <img src="data/Eyebrows/Arched/604.png" >
+  <img onclick="loadEyebrows(this)" src="data/Eyebrows/Arched/602.png" >
+  <img onclick="loadEyebrows(this)" src="data/Eyebrows/Arched/603.png" >
+  <img onclick="loadEyebrows(this)" src="data/Eyebrows/Arched/604.png" >
   </main>
   <br>
   <br />
@@ -152,9 +181,9 @@
 <div id="Eyebrows_plucked" class = "features">
   <h2 style="text-align:center;">Eyebrows - Plucked</h2>
   <main class="grid">
-  <img src="data/Eyebrows/Plucked/103.png" >
-  <img src="data/Eyebrows/Plucked/103.png" >
-  <img src="data/Eyebrows/Plucked/103.png" >
+  <img onclick="loadEyebrows(this)" src="data/Eyebrows/Plucked/103.png" >
+  <img onclick="loadEyebrows(this)" src="data/Eyebrows/Plucked/103.png" >
+  <img onclick="loadEyebrows(this)" src="data/Eyebrows/Plucked/103.png" >
   </main>
   <br>
   <br />
@@ -163,12 +192,12 @@
 <div id="Eyes" class = "features">
   <h2 style="text-align:center;">Eyes</h2>
   <main class="grid">
-  <img src="data/Eyes/100.png" >
-  <img src="data/Eyes/202.png" >
-  <img src="data/Eyes/301.png" >
-  <img src="data/Eyes/407.png" >
-  <img src="data/Eyes/503.png" >
-  <img src="data/Eyes/600.png" >
+  <img onclick="loadEyes(this)" src="data/Eyes/100.png" >
+  <img onclick="loadEyes(this)" src="data/Eyes/202.png" >
+  <img onclick="loadEyes(this)" src="data/Eyes/301.png" >
+  <img onclick="loadEyes(this)" src="data/Eyes/407.png" >
+  <img onclick="loadEyes(this)" src="data/Eyes/503.png" >
+  <img onclick="loadEyes(this)" src="data/Eyes/600.png" >
   </main>
   <br>
   <br />
@@ -177,162 +206,164 @@
 <div id="Glasses_regular" class = "features">
   <h2 style="text-align:center;">Glasses - Regular</h2>
   <main class="grid">
-  <img src="data/Glasses/Regular/101.png" >
-  <img src="data/Glasses/Regular/102.png" >
-  <img src="data/Glasses/Regular/103.png" >
-  <img src="data/Glasses/Regular/104.png" >
-  <img src="data/Glasses/Regular/105.png" >
-  <img src="data/Glasses/Regular/106.png" >
+  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/101.png" >
+  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/102.png" >
+  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/103.png" >
+  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/104.png" >
+  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/105.png" >
+  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/106.png" >
   </main>
   <br>
   <br />
-</div><div id="Glasses_Tinted" class = "features">
+</div><div id="Glasses_tinted" class = "features">
   <h2 style="text-align:center;">Glasses-Tinted</h2>
   <main class="grid">
-<img src="data/Glasses/Tinted/201.png" >
-<img src="data/Glasses/Tinted/202.png" >
-<img src="data/Glasses/Tinted/203.png" >
-<img src="data/Glasses/Tinted/204.png" >
-<img src="data/Glasses/Tinted/205.png" >
-<img src="data/Glasses/Tinted/206.png" >
+<img onclick="loadGlasses(this)" src="data/Glasses/Tinted/201.png" >
+<img onclick="loadGlasses(this)" src="data/Glasses/Tinted/202.png" >
+<img onclick="loadGlasses(this)" src="data/Glasses/Tinted/203.png" >
+<img onclick="loadGlasses(this)" src="data/Glasses/Tinted/204.png" >
+<img onclick="loadGlasses(this)" src="data/Glasses/Tinted/205.png" >
+<img onclick="loadGlasses(this)" src="data/Glasses/Tinted/206.png" >
   </main>
   <br>
   <br />
 </div><div id="Hairs" class = "features" >
   <h2 style="text-align:center;">Hairs</h2>
   <main class="grid">
-<img src="data/Hairs/1.png" >
-<img src="data/Hairs/2.png" >
-<img src="data/Hairs/3.png" >
-<img src="data/Hairs/215.png" >
-<img src="data/Hairs/301.png" >
-<img src="data/Hairs/308.png" >
-<img src="data/Hairs/317.png" >
-<img src="data/Hairs/342.png" >
-<img src="data/Hairs/352.png" >
-<img src="data/Hairs/401.png" >
-<img src="data/Hairs/436.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/1.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/2.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/3.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/215.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/301.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/308.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/317.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/342.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/352.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/401.png" >
+<img onclick="loadHairs(this)" src="data/Hairs/436.png" >
   </main>
   <br>
   <br />
-</div><div id="Head_Shapes" class="features">
-  <h2 style="text-align:center;">Head-Shape-Pointed</h2>
+</div><div id="Head_Shapes_pointed" class="features">
+  <h2 style="text-align:center;">Head Shapes-Pointed</h2>
   <main class="grid">
-  <img src="data/Head Shapes/Pointed/101.png" >
-  <img src="data/Head Shapes/Pointed/102.png" >
-  <img src="data/Head Shapes/Pointed/103.png" >
-  <img src="data/Head Shapes/Pointed/104.png" >
-  <img src="data/Head Shapes/Pointed/105.png" >
-  <img src="data/Head Shapes/Pointed/106.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Pointed/101.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Pointed/102.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Pointed/103.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Pointed/104.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Pointed/105.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Pointed/106.png" >
   </main>
   <br>
   <br />
-</div><div id="Head_Shapes" class="features">
-  <h2 style="text-align:center;">Head-Shape-Round</h2>
+</div><div id="Head_Shapes_round" class="features">
+  <h2 style="text-align:center;">Head Shapes-Round</h2>
   <main class="grid">
-  <img src="data/Head Shapes/Round/201.png" >
-  <img src="data/Head Shapes/Round/202.png" >
-  <img src="data/Head Shapes/Round/203.png" >
-  <img src="data/Head Shapes/Round/204.png" >
-  <img src="data/Head Shapes/Round/205.png" >
-  <img src="data/Head Shapes/Round/206.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Round/201.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Round/202.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Round/203.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Round/204.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Round/205.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Round/206.png" >
   </main>
   <br>
   <br />
-</div><div id="Head_Shapes" class="features">
-  <h2 style="text-align:center;">Head-Shape-Square</h2>
+</div><div id="Head_Shapes_square" class="features">
+  <h2 style="text-align:center;">Head Shapes-Square</h2>
   <main class="grid">
-  <img src="data/Head Shapes/Square/301.png" >
-  <img src="data/Head Shapes/Square/302.png" >
-  <img src="data/Head Shapes/Square/303.png" >
-  <img src="data/Head Shapes/Square/304.png" >
-  <img src="data/Head Shapes/Square/305.png" >
-  <img src="data/Head Shapes/Square/306.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Square/301.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Square/302.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Square/303.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Square/304.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Square/305.png" >
+  <img onclick="loadHeadShapes(this)" src="data/HeadShapes/Square/306.png" >
   </main>
   <br>
   <br />
 </div><div id="Jaw_Shapes" class="features">
   <h2 style="text-align:center;">Jaw-Shapes</h2>
   <main class="grid">
-  <img src="data/Jaw Shapes/101.png" >
-  <img src="data/Jaw Shapes/200.png" >
-  <img src="data/Jaw Shapes/300.png" >
-  <img src="data/Jaw Shapes/400.png" >
-  <img src="data/Jaw Shapes/501.png" >
-  <img src="data/Jaw Shapes/600.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/101.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/200.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/300.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/400.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/501.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/600.png" >
   </main>
   <br>
   <br />
 
-</div><div id="Lips" class="features">
+</div><div id="Lips_even" class="features">
   <h2 style="text-align:center;">Lips - Even</h2>
   <main class="grid">
-  <img src="data/Lips/Even/301.png" >
-  <img src="data/Lips/Even/304.png" >
-  <img src="data/Lips/Even/315.png" >
+  <img onclick="loadLips(this)" src="data/Lips/Even/301.png" >
+  <img onclick="loadLips(this)" src="data/Lips/Even/304.png" >
+  <img onclick="loadLips(this)" src="data/Lips/Even/315.png" >
   </main>
   <br>
   <br />
-</div><div id="Lips" class="features">
+</div><div id="Lips_wide" class="features">
   <h2 style="text-align:center;">Lips - Wide</h2>
   <main class="grid">
-  <img src="data/Lips/Wide/808.png" >
-  <img src="data/Lips/Wide/810.png" >
-  <img src="data/Lips/Wide/820.png" >
+  <img onclick="loadLips(this)" src="data/Lips/Wide/808.png" >
+  <img onclick="loadLips(this)" src="data/Lips/Wide/810.png" >
+  <img onclick="loadLips(this)" src="data/Lips/Wide/820.png" >
   </main>
   <br>
   <br />
 </div><div id="Moustaches" class="features">
   <h2 style="text-align:center;">Moustaches</h2>
   <main class="grid">
-  <img src="data/Moustaches/short/112.png" >
-  <img src="data/Moustaches/short1/112.png" >
-  <img src="data/Moustaches/thick/310.png" >
-  <img src="data/Moustaches/thick1/310.png" >
-  <img src="data/Moustaches/Thin/201.png" >
-  <img src="data/Moustaches/thin1/201.png" >
+  <img onclick="loadMoustaches(this)" src="data/Moustaches/short/112.png" >
+  <img onclick="loadMoustaches(this)" src="data/Moustaches/short1/112.png" >
+  <img onclick="loadMoustaches(this)" src="data/Moustaches/thick/310.png" >
+  <img onclick="loadMoustaches(this)" src="data/Moustaches/thick1/310.png" >
+  <img onclick="loadMoustaches(this)" src="data/Moustaches/Thin/201.png" >
+  <img onclick="loadMoustaches(this)" src="data/Moustaches/thin1/201.png" >
   </main>
   <br>
   <br />
 
-</div><div id="Noses" class="features">
-  <h2 style="text-align:center;">Nose-Average-Pointed</h2>
+</div><div id="Noses_avg_pointed" class="features">
+  <h2 style="text-align:center;">Nose - Average-Pointed</h2>
   <main class="grid">
-  <img src="data/Noses/Average Pointed/400.png" >
-  <img src="data/Noses/Average Pointed/401.png" >
-  <img src="data/Noses/Average Pointed/402.png" >
-  <img src="data/Noses/Average Pointed/403.png" >
-  <img src="data/Noses/Average Pointed/404.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average Pointed/400.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average Pointed/401.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average Pointed/402.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average Pointed/403.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average Pointed/404.png" >
 </main>
   <br>
   <br />
 
-</div><div id="Noses" class="features">
-  <h2 style="text-align:center;">Nose-Average with broad base</h2>
+</div><div id="Noses_avg_with_broad_base" class="features">
+  <h2 style="text-align:center;">Nose - Average with broad base</h2>
   <main class="grid">
-  <img src="data/Noses/Average with broad base/505.png" >
-  <img src="data/Noses/Average with broad base/501.png" >
-  <img src="data/Noses/Average with broad base/502.png" >
-  <img src="data/Noses/Average with broad base/503.png" >
-  <img src="data/Noses/Average with broad base/504.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with broad base/505.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with broad base/501.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with broad base/502.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with broad base/503.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with broad base/504.png" >
   </main>
   <br>
   <br />
 
-</div><div id="Noses" class="features">
-  <h2 style="text-align:center;">Nose-Average with round base</h2>
+</div><div id="Noses_avg_with_round_base" class="features">
+  <h2 style="text-align:center;">Nose - Average with round base</h2>
   <main class="grid">
-  <img src="data/Noses/Average with round base/200.png" >
-  <img src="data/Noses/Average with round base/201.png" >
-  <img src="data/Noses/Average with round base/202.png" >
-  <img src="data/Noses/Average with round base/203.png" >
-  <img src="data/Noses/Average with round base/204.png" >
-    <img src="data/Noses/Average with round base/205.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with round base/200.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with round base/201.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with round base/202.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with round base/203.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with round base/204.png" >
+  <img onclick="loadNoses(this)" src="data/Noses/Average with round base/205.png" >
   </main>
   <br>
   <br />
 
-</div><div id="Noses" class="features">
+</div>
+<!--
+<div id="Noses" class="features">
   <h2 style="text-align:center;">Hooked,Nostrils not showing</h2>
   <main class="grid">
   <img src="data/Noses/Hooked,Nostrils not showing/600.png" >
@@ -370,15 +401,13 @@
   <br>
   <br />
 
-
-
-
 </div>
+-->
   <button type="button" class="btn btn-success">Save</button>
 </div>
 </div>
 <script>
-  var width = window.innerWidth;
+  var width = 0.66*window.innerWidth;
   var height = window.innerHeight;
 
   function update(activeAnchor) {
@@ -476,55 +505,228 @@
   var layer = new Konva.Layer();
   stage.add(layer);
 
-  // darth vader
-  var darthVaderImg = new Konva.Image({
-    width: 400,
-    height: 260
+  // eyes
+  var eyes = new Konva.Image({
+    width: 760,
+    height: 550
   });
 
-  // yoda
-  var yodaImg = new Konva.Image({
-    width: 400,
-    height: 260
+  // eyebrows
+  var eyebrows = new Konva.Image({
+    width: 760,
+    height: 550
   });
 
-  var darthVaderGroup = new Konva.Group({
+  // lips
+  var lips = new Konva.Image({
+    width: 760,
+    height: 550
+  });
+
+  // noses
+  var noses = new Konva.Image({
+    width: 740,
+    height: 550
+  });
+
+  // jawshapes
+  var jawshapes = new Konva.Image({
+    width: 820,
+    height: 550
+  });
+
+  // headshapes
+  var headshapes = new Konva.Image({
+    width: 800,
+    height: 550
+  });
+
+  // hairs
+  var hairs = new Konva.Image({
+    width: 780,
+    height: 550
+  });
+
+  // moustaches
+  var moustaches = new Konva.Image({
+    width: 760,
+    height: 550
+  });
+
+  // beards
+  var beards = new Konva.Image({
+    width: 680,
+    height: 550
+  });
+
+  // glasses
+  var glasses = new Konva.Image({
+    width: 450,
+    height: 345
+  });
+
+  noses.zIndex(0);
+  lips.zIndex(1);
+
+  var lipsGroup = new Konva.Group({
+    x: 165,
+    y: 60,
+    draggable: true
+  });
+  layer.add(lipsGroup);
+  lipsGroup.add(lips);
+
+  var nosesGroup = new Konva.Group({
+    x: 177,
+    y: 56,
+    draggable: true
+  });
+  layer.add(nosesGroup);
+  nosesGroup.add(noses);
+
+  var eyesGroup = new Konva.Group({
+    x: 165,
+    y: 58,
+    draggable: true
+  });
+  layer.add(eyesGroup);
+  eyesGroup.add(eyes);
+
+
+  var eyebrowsGroup = new Konva.Group({
+    x: 165,
+    y: 44,
+    draggable: true
+  });
+  layer.add(eyebrowsGroup);
+  eyebrowsGroup.add(eyebrows);
+
+
+
+  var jawshapesGroup = new Konva.Group({
+    x: 140,
+    y: 100,
+    draggable: true
+  });
+  layer.add(jawshapesGroup);
+  jawshapesGroup.add(jawshapes);
+
+
+  var headshapesGroup = new Konva.Group({
+    x: 148,
+    y: 50,
+    draggable: true
+  });
+  layer.add(headshapesGroup);
+  headshapesGroup.add(headshapes);
+
+
+  var hairsGroup = new Konva.Group({
+    x: 154,
+    y: 29,
+    draggable: true
+  });
+  layer.add(hairsGroup);
+  hairsGroup.add(hairs);
+
+
+  var moustachesGroup = new Konva.Group({
+    x: 165,
+    y: 58,
+    draggable: true
+  });
+  layer.add(moustachesGroup);
+  moustachesGroup.add(moustaches);
+
+
+  var beardsGroup = new Konva.Group({
+    x: 218,
+    y: 120,
+    draggable: true
+  });
+  layer.add(beardsGroup);
+  beardsGroup.add(beards);
+
+
+  var glassesGroup = new Konva.Group({
     x: 300,
     y: 200,
     draggable: true
   });
-  layer.add(darthVaderGroup);
-  darthVaderGroup.add(darthVaderImg);
-  addAnchor(darthVaderGroup, 100, 50, 'topLeft');
-  addAnchor(darthVaderGroup, 300, 50, 'topRight');
-  addAnchor(darthVaderGroup, 300, 260, 'bottomRight');
-  addAnchor(darthVaderGroup, 100, 260, 'bottomLeft');
+  layer.add(glassesGroup);
+  glassesGroup.add(glasses);
 
-  var yodaGroup = new Konva.Group({
-    x: 300,
-    y: 110,
-    draggable: true
-  });
-  layer.add(yodaGroup);
-  yodaGroup.add(yodaImg);
-  addAnchor(yodaGroup, 0, 0, 'topLeft');
-  addAnchor(yodaGroup, 300, 0, 'topRight');
-  addAnchor(yodaGroup, 300, 110, 'bottomRight');
-  addAnchor(yodaGroup, 0, 110, 'bottomLeft');
+
+  var imageObj4 = new Image();
+  imageObj4.onload = function() {
+    lips.image(imageObj4);
+    layer.draw();
+  };
+  imageObj4.src = '';
 
   var imageObj1 = new Image();
   imageObj1.onload = function() {
-    darthVaderImg.image(imageObj1);
+    noses.image(imageObj1);
     layer.draw();
   };
-  imageObj1.src = 'data/Jaw Shapes/300.png';
+  imageObj1.src = '';
 
   var imageObj2 = new Image();
   imageObj2.onload = function() {
-    yodaImg.image(imageObj2);
+    eyebrows.image(imageObj2);
     layer.draw();
   };
-  imageObj2.src = 'data/Hairs/317.png';
+  imageObj2.src = '';
+
+  var imageObj3 = new Image();
+  imageObj3.onload = function() {
+    eyes.image(imageObj3);
+    layer.draw();
+  };
+  imageObj3.src = '';
+
+  var imageObj5 = new Image();
+  imageObj5.onload = function() {
+    jawshapes.image(imageObj5);
+    layer.draw();
+  };
+  imageObj5.src = '';
+
+  var imageObj6 = new Image();
+  imageObj6.onload = function() {
+    headshapes.image(imageObj6);
+    layer.draw();
+  };
+  imageObj6.src = '';
+
+  var imageObj7 = new Image();
+  imageObj7.onload = function() {
+    hairs.image(imageObj7);
+    layer.draw();
+  };
+  imageObj7.src = '';
+
+  var imageObj8 = new Image();
+  imageObj8.onload = function() {
+    moustaches.image(imageObj8);
+    layer.draw();
+  };
+  imageObj8.src = '';
+
+  var imageObj9 = new Image();
+  imageObj9.onload = function() {
+    beards.image(imageObj9);
+    layer.draw();
+  };
+  imageObj9.src = '';
+
+  var imageObj10 = new Image();
+  imageObj10.onload = function() {
+    glasses.image(imageObj10);
+    layer.draw();
+  };
+  imageObj10.src = '';
+
   function showAnchors() {
    this.find('Circle').show();
    layer.draw();
@@ -535,10 +737,104 @@
    layer.draw();
  }
 
- yodaGroup.on('mouseenter', showAnchors);
- yodaGroup.on('mouseleave', hideAnchors);
- darthVaderGroup.on('mouseenter', showAnchors);
- darthVaderGroup.on('mouseleave', hideAnchors);
+ eyebrowsGroup.on('mouseenter', showAnchors);
+ eyebrowsGroup.on('mouseleave', hideAnchors);
+ eyesGroup.on('mouseenter', showAnchors);
+ eyesGroup.on('mouseleave', hideAnchors);
+ nosesGroup.on('mouseenter', showAnchors);
+ nosesGroup.on('mouseleave', hideAnchors);
+ lipsGroup.on('mouseenter', showAnchors);
+ lipsGroup.on('mouseleave', hideAnchors);
+ jawshapesGroup.on('mouseenter', showAnchors);
+ jawshapesGroup.on('mouseleave', hideAnchors);
+ headshapesGroup.on('mouseenter', showAnchors);
+ headshapesGroup.on('mouseleave', hideAnchors);
+ hairsGroup.on('mouseenter', showAnchors);
+ hairsGroup.on('mouseleave', hideAnchors);
+ moustachesGroup.on('mouseenter', showAnchors);
+ moustachesGroup.on('mouseleave', hideAnchors);
+ beardsGroup.on('mouseenter', showAnchors);
+ beardsGroup.on('mouseleave', hideAnchors);
+ glassesGroup.on('mouseenter', showAnchors);
+ glassesGroup.on('mouseleave', hideAnchors);
+
+</script>
+<script>
+function show(x){
+    $('.features').hide();
+    $('#' + x.getAttribute("id")).show();
+}
+function loadNoses(x){
+    imageObj1.src=x.src;
+    /*addAnchor(nosesGroup, 100, 50, 'topLeft');
+    addAnchor(nosesGroup, 300, 50, 'topRight');
+    addAnchor(nosesGroup, 300, 260, 'bottomRight');
+    addAnchor(nosesGroup, 100, 260, 'bottomLeft');*/
+}
+function loadEyebrows(x){
+    imageObj2.src=x.src;
+    /*addAnchor(eyebrowsGroup, 0, 0, 'topLeft');
+    addAnchor(eyebrowsGroup, 300, 0, 'topRight');
+    addAnchor(eyebrowsGroup, 300, 110, 'bottomRight');
+    addAnchor(eyebrowsGroup, 0, 110, 'bottomLeft');*/
+}
+function loadEyes(x){
+    imageObj3.src=x.src;
+    /*addAnchor(eyesGroup, 100, 50, 'topLeft');
+    addAnchor(eyesGroup, 300, 50, 'topRight');
+    addAnchor(eyesGroup, 300, 260, 'bottomRight');
+    addAnchor(eyesGroup, 100, 260, 'bottomLeft');*/
+}
+function loadLips(x){
+    imageObj4.src=x.src;
+    /*addAnchor(lipsGroup, 100, 50, 'topLeft');
+    addAnchor(lipsGroup, 300, 50, 'topRight');
+    addAnchor(lipsGroup, 300, 260, 'bottomRight');
+    addAnchor(lipsGroup, 100, 260, 'bottomLeft');*/
+}
+function loadJawShapes(x){
+    imageObj5.src=x.src;
+    /*addAnchor(jawshapesGroup, 100, 50, 'topLeft');
+    addAnchor(jawshapesGroup, 300, 50, 'topRight');
+    addAnchor(jawshapesGroup, 300, 260, 'bottomRight');
+    addAnchor(jawshapesGroup, 100, 260, 'bottomLeft');*/
+}
+function loadHeadShapes(x){
+    imageObj6.src=x.src;
+    /*addAnchor(headshapesGroup, 100, 50, 'topLeft');
+    addAnchor(headshapesGroup, 300, 50, 'topRight');
+    addAnchor(headshapesGroup, 300, 260, 'bottomRight');
+    addAnchor(headshapesGroup, 100, 260, 'bottomLeft');*/
+}
+function loadHairs(x){
+    imageObj7.src=x.src;
+    /*addAnchor(hairsGroup, 100, 50, 'topLeft');
+    addAnchor(hairsGroup, 300, 50, 'topRight');
+    addAnchor(hairsGroup, 300, 260, 'bottomRight');
+    addAnchor(hairsGroup, 100, 260, 'bottomLeft');*/
+}
+function loadMoustaches(x){
+    imageObj8.src=x.src;
+    /*addAnchor(moustachesGroup, 100, 50, 'topLeft');
+    addAnchor(moustachesGroup, 300, 50, 'topRight');
+    addAnchor(moustachesGroup, 300, 260, 'bottomRight');
+    addAnchor(moustachesGroup, 100, 260, 'bottomLeft');*/
+}
+function loadBeards(x){
+    imageObj9.src=x.src;
+    /*addAnchor(beardsGroup, 100, 50, 'topLeft');
+    addAnchor(beardsGroup, 300, 50, 'topRight');
+    addAnchor(beardsGroup, 300, 260, 'bottomRight');
+    addAnchor(beardsGroup, 100, 260, 'bottomLeft');*/
+}
+function loadGlasses(x){
+    imageObj10.src=x.src;
+    /*addAnchor(glassesGroup, 100, 50, 'topLeft');
+    addAnchor(glassesGroup, 300, 50, 'topRight');
+    addAnchor(glassesGroup, 300, 260, 'bottomRight');
+    addAnchor(glassesGroup, 100, 260, 'bottomLeft');*/
+}
+
 </script>
 </body>
 </html>
