@@ -49,7 +49,6 @@
     <div class="dropdown-content">
       <!--<a onclick="show(this)">Straight</a><br>-->
       <a onclick="show(Eyebrows_arched)">Arched</a><br>
-      <a onclick="show(Eyebrows_plucked)">Plucked</a><br>
     </div>
   </div>
   <div class="dropdown1">
@@ -128,15 +127,7 @@
       <a onclick="show(Beards_square)">Square</a><br>
     </div>
   </div>
-  <div class="dropdown1">
-    <button class="dropbtn">Glasses
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a onclick="show(Glasses_regular)">Regular</a><br>
-      <a onclick="show(Glasses_tinted)">Tinted</a><br>
-    </div>
-  </div>
+
 </div>
 
 
@@ -207,11 +198,6 @@
   <h2 style="text-align:center;">Glasses - Regular</h2>
   <main class="grid">
   <img onclick="loadGlasses(this)" src="data/Glasses/Regular/101.png" >
-  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/102.png" >
-  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/103.png" >
-  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/104.png" >
-  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/105.png" >
-  <img onclick="loadGlasses(this)" src="data/Glasses/Regular/106.png" >
   </main>
   <br>
   <br />
@@ -283,12 +269,8 @@
 </div><div id="Jaw_Shapes" class="features">
   <h2 style="text-align:center;">Jaw-Shapes</h2>
   <main class="grid">
-  <img onclick="loadJawShapes(this)" src="data/JawShapes/101.png" >
-  <img onclick="loadJawShapes(this)" src="data/JawShapes/200.png" >
   <img onclick="loadJawShapes(this)" src="data/JawShapes/300.png" >
-  <img onclick="loadJawShapes(this)" src="data/JawShapes/400.png" >
-  <img onclick="loadJawShapes(this)" src="data/JawShapes/501.png" >
-  <img onclick="loadJawShapes(this)" src="data/JawShapes/600.png" >
+  <img onclick="loadJawShapes(this)" src="data/JawShapes/301.png" >
   </main>
   <br>
   <br />
@@ -561,8 +543,8 @@
 
   // glasses
   var glasses = new Konva.Image({
-    width: 450,
-    height: 345
+    width: 760,
+    height: 550
   });
 
   noses.zIndex(0);
