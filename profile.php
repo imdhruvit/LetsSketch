@@ -142,7 +142,6 @@ $currentUserID=$_SESSION['user'];
   <h3 style="text-align:center;">Beards - Full</h3>
   <main class="grid">
   <img onclick="loadBeards(this)" src="data/Beards/full/500.png">
-  <img onclick="loadBeards(this)" src="data/Beards/full/503.png">
   </main>
   <br>
   <br />
@@ -150,7 +149,6 @@ $currentUserID=$_SESSION['user'];
 <div id="Beards_oval" class = "features">
   <h3 style="text-align:center;">Beards - Oval</h3>
   <main class="grid">
-  <img onclick="loadBeards(this)" src="data/Beards/oval/300.png">
   <img onclick="loadBeards(this)" src="data/Beards/oval/302.png">
   <img onclick="loadBeards(this)" src="data/Beards/oval/305.png">
   </main>
@@ -232,7 +230,6 @@ $currentUserID=$_SESSION['user'];
 <img onclick="loadHairs(this)" src="data/Hairs/317.png" >
 <img onclick="loadHairs(this)" src="data/Hairs/342.png" >
 <img onclick="loadHairs(this)" src="data/Hairs/352.png" >
-<img onclick="loadHairs(this)" src="data/Hairs/401.png" >
 <img onclick="loadHairs(this)" src="data/Hairs/436.png" >
   </main>
   <br>
@@ -303,11 +300,8 @@ $currentUserID=$_SESSION['user'];
 </div><div id="Moustaches" class="features">
   <h2 style="text-align:center;">Moustaches</h2>
   <main class="grid">
-  <img onclick="loadMoustaches(this)" src="data/Moustaches/short/112.png" >
   <img onclick="loadMoustaches(this)" src="data/Moustaches/short1/112.png" >
-  <img onclick="loadMoustaches(this)" src="data/Moustaches/thick/310.png" >
   <img onclick="loadMoustaches(this)" src="data/Moustaches/thick1/310.png" >
-  <img onclick="loadMoustaches(this)" src="data/Moustaches/Thin/201.png" >
   <img onclick="loadMoustaches(this)" src="data/Moustaches/thin1/201.png" >
   </main>
   <br>
@@ -629,8 +623,8 @@ $currentUserID=$_SESSION['user'];
 
 
   var beardsGroup = new Konva.Group({
-    x: 218,
-    y: 120,
+    x: 214,
+    y: 118,
     draggable: true
   });
   layer.add(beardsGroup);
@@ -823,18 +817,24 @@ function loadGlasses(x){
     addAnchor(glassesGroup, 300, 260, 'bottomRight');
     addAnchor(glassesGroup, 100, 260, 'bottomLeft');*/
 }
+
 function savecanvas(){
-  var canvas = document.getElementById('container');
+  var canvas = document.getElementsByTagName('canvas')[0];
   var dataURL = canvas.toDataURL();
   $.ajax({
-    type: "post",
+    type: "POST",
     url: "save_canvas.php",
     data: {
-     imgBase64: dataURL
-   }
-}).done(function(o) {
-  console.log('saved');
-});
+       imgBase64: dataURL
+    }
+  }).done(function(o) {
+    console.log('saved');
+    // If you want the file to be visible in the browser
+    // - please modify the callback in javascript. All you
+    // need is to return the url to the file, you just saved
+    // and than put the image in your browser.
+  });
+
 }
 
 </script>

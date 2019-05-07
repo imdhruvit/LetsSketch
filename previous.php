@@ -29,12 +29,23 @@ $currentUserID=$_SESSION['user'];
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-3">
-    <img src="sk_2.jpg" width="200">
-  </div>
-  <div class="col-sm-3">
-    <img src="sk_3.jpg" width="200">
-  </div>
+  <?php
+  $dir = 'sketches/'.$currentUserID.'/';
+
+  // Open a directory, and read its contents
+  if (is_dir($dir)){
+    if ($dh = opendir($dir)){
+      $i=0;
+      while (($file = readdir($dh)) !== false){
+        if($i>1){
+          echo '<div class="col-sm-3"><img src="'.$dir.'/'.$file.'" width="400"></div>';
+        }
+        $i++;
+      }
+    }
+    closedir($dh);
+  }
+  ?>
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost","root", "","letssketch");
+$conn = new mysqli("localhost","root", "toor","letssketch");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
