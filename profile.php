@@ -1,3 +1,10 @@
+<?php
+session_start();
+$currentUserID=$_SESSION['user'];
+  if($currentUserID==NULL){
+    header("Location:home.html");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +25,9 @@
   <div class="header">
   <a href="#default" class="logo" id="head">Let's Sketch</a>
   <div class="header-right">
-    <a href="profile.html" class="active">Profile</a>
-    <a href="previous.html">All Sketches</a>
-    <a href="home.html">Logout</a>
+    <a href="profile.php" class="active">Profile</a>
+    <a href="previous.php">All Sketches</a>
+    <a href="logout.php">Logout</a>
   </div>
 </div>
   <div class="row">
@@ -385,7 +392,7 @@
 
 </div>
 -->
-  <button type="button" class="btn btn-success">Save</button>
+  <button type="button" class="btn btn-success" onclick="savecanvas()">Save</button>
 </div>
 </div>
 <script>
@@ -399,7 +406,7 @@
     var topRight = group.get('.topRight')[0];
     var bottomRight = group.get('.bottomRight')[0];
     var bottomLeft = group.get('.bottomLeft')[0];
-    var image = group.get('Image')[0];
+
 
     var anchorX = activeAnchor.getX();
     var anchorY = activeAnchor.getY();
@@ -443,7 +450,7 @@
       stroke: '#666',
       fill: '#ddd',
       strokeWidth: 2,
-      radius: 8,
+      radius: 11,
       name: name,
       draggable: true,
       dragOnTop: false
@@ -815,6 +822,19 @@ function loadGlasses(x){
     addAnchor(glassesGroup, 300, 50, 'topRight');
     addAnchor(glassesGroup, 300, 260, 'bottomRight');
     addAnchor(glassesGroup, 100, 260, 'bottomLeft');*/
+}
+function savecanvas(){
+  var canvas = document.getElementById('container');
+  var dataURL = canvas.toDataURL();
+  $.ajax({
+    type: "post",
+    url: "save_canvas.php",
+    data: {
+     imgBase64: dataURL
+   }
+}).done(function(o) {
+  console.log('saved');
+});
 }
 
 </script>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+$currentUserID=$_SESSION['user'];
+  if($currentUserID==NULL){
+    header("Location:home.html");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +23,9 @@
   <div class="header">
   <a href="#default" class="logo" id="head">Let's Sketch</a>
   <div class="header-right">
-    <a href="profile.html">Profile</a>
+    <a href="profile.php">Profile</a>
     <a class="active">All Sketches</a>
-    <a href="home.html">Logout</a>
+    <a href="logout.php">Logout</a>
   </div>
 </div>
 <div class="row">
