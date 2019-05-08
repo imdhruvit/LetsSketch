@@ -38,7 +38,7 @@ $currentUserID=$_SESSION['user'];
       $i=0;
       while (($file = readdir($dh)) !== false){
         if($i>1){
-          echo '<div class="col-sm-3"><img src="'.$dir.'/'.$file.'" width="400"></div>';
+          echo '<div class="col-sm-3"><img src="'.$dir.'/'.$file.'" onclick=print(this) width="400"></div>';
         }
         $i++;
       }
@@ -47,5 +47,13 @@ $currentUserID=$_SESSION['user'];
   }
   ?>
 </div>
+<script>
+  function print(x){
+    var popup = window.open();
+    popup.document.write('<html><body><img src="'+x.src+'" width="1000" height="700" /></body></html>');
+    popup.focus(); //required for IE
+    popup.print();
+  }
+</script>
 </body>
 </html>
